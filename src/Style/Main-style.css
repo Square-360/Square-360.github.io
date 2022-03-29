@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Playball&family=Roboto:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&family=Montserrat:wght@300;400;700;900&family=Noto+Sans+Mono:wght@400;500;700;900&family=Playball&family=Roboto:wght@300;400;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General styling */
+
+:root {
+  --color-primary-100: #8153ff;
+  --color-primary-300: #5928e5;
+  --color-primary-500: #5124ce;
+  --color-white-700: rgba(250, 250, 250, 0.8);
+
+  --gradient-primary: linear-gradient(rgb(0, 148, 255), rgb(112, 0, 255));
+  --gradient-primary-alt: linear-gradient(90deg, #0094ff 0%, #7000ff 100%);
+}
+
+body,
+html {
+  @apply h-full m-0 p-0 box-border font-montserrat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.flex-box {
+  @apply flex justify-between items-center;
+}
+
+.flex-box-center {
+  @apply flex justify-center items-center;
+}
+
+.primary-cl-text {
+  -webkit-text-fill-color: transparent;
+  @apply text-primary bg-primary from-[#0094ff] to-[#7000ff] bg-gradient-to-b bg-clip-text;
+}
+
+.title {
+  @apply text-primary font-black text-center sm:text-[32px] md:text-[46px] xl:text-[52px];
+}
+
+.page-title {
+  @apply text-primary font-black text-center sm:text-[32px] md:text-[46px] xl:text-[58px];
+}
+
+/* Container */
+
+.container {
+  @apply max-w-[1230px] mx-auto px-[15px];
+}
+
+/* Buttons */
+
+button {
+  @apply text-white text-[22px] font-black 
+          cursor-pointer py-[15px] px-[35px] bg-primary
+          border-[3px] border-transparent border-solid rounded-[10px]
+          shadow-xl transition-all duration-300 ease-in-out
+          hover:bg-transparent hover:border-primary;
+}
+
+button.border {
+  @apply text-white bg-transparent
+          border-[3px] border-primary border-solid
+        hover:text-white hover:bg-primary hover:border-transparent;
+}
+
+button.back {
+  @apply text-primary bg-transparent
+        py-[5px] px-[15px] font-medium mt-[30px]
+        border-[1px] border-primary border-solid
+        hover:text-white hover:bg-primary hover:border-transparent shadow-none;
+}
+
+button.back.er{
+  @apply py-[10px] border-[2px] font-bold
+}
+
+button:disabled{
+  @apply bg-gray-400
+}
+
+button:disabled:hover{
+  @apply border-transparent text-white cursor-default
+}
+
+/* Intro */
+
+.watermark-intro {
+  @apply text-[188px] font-black text-[#ffffff4d] absolute 
+          sm:text-transparent 
+          lg:text-[#ffffff4d] lg:text-[86px] xl:text-[115px];
+}
+
+.watermark-intro:first-child {
+  @apply top-[220px] left-[550px] 
+          lg:top-[140px] lg:left-[430px] xl:left-[370px];
+}
+
+.watermark-intro:nth-child(2) {
+  @apply bottom-[82px] left-[0];
+}
+
+.intro {
+  background-image: url("../Images/Intro-bg.png");
+  @apply relative bg-no-repeat bg-cover bg-fixed z-0
+          after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-black 
+          after:z-50 after:opacity-80;
+}
+
+.intro-title {
+  @apply text-white text-[64px] font-black max-w-[890px] mx-auto;
+}
+
+.intro-text {
+  @apply text-white text-[24px] font-bold max-w-[760px] mt-[50px] mx-auto mb-0;
+}
+
+/* About-list */
+
+.about-list-item {
+  @apply max-w-[340px] text-white text-center sm:mb-[65px];
+}
+
+.about-list-item i {
+  @apply text-[70px] text-white w-auto;
+}
+
+.about-list-item h1 {
+  @apply text-[28px] font-black mt-[20px] sm:text-[24px] md:text-[28px];
+}
+
+.about-list-item ul {
+  @apply text-left;
+}
+
+.about-list-item p {
+  @apply text-[18px] font-normal sm:text-[16px] md:text-[18px];
+}
+
+/* Portfolio */
+
+.portfolio-inner {
+  @apply py-[120px] sm:py-[80px] md:py-[105px];
+}
+
+/* Portfolio card */
+
+.portfolio-card {
+  background-image: url(../Images/Portfolio-image.png);
+  @apply w-[775px] rounded-[30px] bg-no-repeat bg-cover relative mt-[88px] mx-auto z-[100]
+
+          after:block after:w-full after:h-full after:rounded-[30px]
+          after:bg-gradient-to-b after:from-transparent after:to-primary
+          after:absolute after:top-0 after:left-0 after:z-[1]
+          after:transition-all after:duration-[400ms]
+
+          sm:w-full sm:bg-center sm:mt-[50px]
+          md:mt-[88px] xl:w-[775px];
+}
+
+.portfolio-card-content {
+  @apply relative z-[90] pt-[270px] px-[50px] pb-[25px]
+          sm:pt-[105px] md:pt-[180px] xl:pt-[270px];
+}
+
+.portfolio-card-content h1 {
+  @apply text-white text-[42px] font-black sm:text-[28px] md:text-[36px] xl:text-[42px];
+}
+
+.portfolio-btn {
+  @apply text-white mt-[38px] border-white shadow-none bg-transparent
+          hover:text-black hover:bg-white hover:border-white sm:text-[18px] lg:text-[22px];
+}
+
+/* Footer */
+
+.footer {
+  @apply mt-auto relative bottom-0 left-0;
+}
+
+.footer-col {
+  @apply w-4/12 sm:w-10/12 sm:text-center m-auto mb-10 lg:m-0;
+}
+
+.footer-inner {
+  @apply py-28 flex justify-between sm:flex-col sm:justify-center sm:py-14 lg:flex-row lg:items-start lg:justify-between;
+}
+
+.social-icons {
+  @apply bg-primary w-16 h-16 rounded-full shadow-md hover:scale-110 transition duration-200;
+}
+
+.projects-card-content {
+  @apply relative z-[1000];
+}
+
+.projects-card {
+  @apply relative rounded-3xl overflow-hidden sm:mt-10
+          after:absolute after:top-[0] after:left-0 after:z-[40] after:w-full after:h-full 
+          after:bg-gradient-to-r after:from-primary after:to-[#c4c4c400];
+}
+
+.projects-button {
+  @apply absolute left-[35px] bottom-[35px] z-[50]
+          sm:left-[50%] sm:translate-x-[-50%] sm:bottom-[18px] sm:w-[90%]
+          md:left-[35px] md:translate-x-0 md:bottom-[35px] md:w-auto;
+}
+
+/* About page */
+
+.about-title {
+  @apply text-[124px] font-black text-[#5928e5] opacity-20 absolute w-full text-center z-10 
+          sm:hidden lg:inline lg:text-[94px] lg:leading-[0.8]
+          xl:text-[124px] xl:leading-[1.5];
+}
+
+.team-wrapper {
+  @apply grid sm:gap-[50px] lg:gap-[70px] grid-cols-3 sm:grid-cols-1 md:grid-cols-2 md:gap-[30px] lg:grid-cols-3 xl:gap-[70px];
+}
+
+/* Form */
+
+.form-sub-title {
+  @apply inline-block text-[22px] mb-[15px] mt-[30px] sm:text-[18px] lg:text-[22px];
+}
+
+.input {
+  @apply block bg-[#ebebeb] text-[22px] py-[15px] px-[25px] rounded-[15px] w-full 
+          focus:outline-none sm:text-[18px] lg:text-[22px];
+}
+
+.input-form {
+  @apply max-w-[730px] rounded-[30px] pt-[65px] pb-[110px] md:px-[30px] sm:px-[15px] bg-white drop-shadow-2xl mx-auto mt-[73px]
+  sm:max-w-[93%] sm:mx-auto sm:mt-[53px] md:px-[35px] 
+  lg:max-w-[730px] lg:px-0;
+}
