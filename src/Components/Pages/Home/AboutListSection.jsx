@@ -13,7 +13,7 @@ function AboutListSection() {
   return (
     <section className="about-list bg-primary" id="about-list-section">
       <div className="container">
-        <div className="flex justify-between items-center py-[70px] sm:flex-col xl:flex-row">
+        <div className="flex justify-between items-center lg:py-[70px] sm:pt-[50px] sm:pb-[30px] sm:flex-col xl:flex-row">
           <div className="about-list-item">
             <i className="fas fa-crosshairs"></i>
             <h1>Миссия команды</h1>

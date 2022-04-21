@@ -15,11 +15,8 @@ function FooterColThree() {
         <a href="https://t.me/+n579coQVr38zZDU6">
           <i className="fab fa-telegram-plane text-3xl text-white"></i>
         </a>
-        <a href="#">
-          <i className="fab fa-tiktok text-3xl text-white"></i>
-        </a>
-        <a href="#">
-          <i className="fab fa-linkedin-in text-3xl text-white"></i>
+        <a href="https://github.com/Square-360">
+        <i className="fab fa-github text-3xl text-white sm:text-2xl md:text-3xl"></i>
         </a>
       </div>
     </div>

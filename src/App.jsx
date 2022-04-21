@@ -8,14 +8,14 @@ import Home from "./Components/Pages/Home/Home";
 import Projects from "./Components/Pages/Projects/Projects";
 import PostPage from "./Components/Pages/Blog/PostPage";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Footer from "./Components/UI/MyButton/Footer/Footer";
 import NotFoundPage from "./Components/Pages/404/NotFoundPage";
 
 function App() {
   return (
     <div className="page">
-      <Router>
+      <HashRouter hashType="hashbang">
         <Routes>
           <Route path="/" element={<Home elementId="home" />} />
           <Route path="/projects" element={<Projects elementId="projects" />} />
@@ -30,7 +30,7 @@ function App() {
           <Route path="*" element={<NotFoundPage elementId="home" />} />
         </Routes>
         <Footer />
-      </Router>
+      </HashRouter>
     </div>
   );
 }

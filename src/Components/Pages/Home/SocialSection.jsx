@@ -5,7 +5,7 @@ function SocialSection() {
   return (
     <section className="social" id="social-section">
       <div className="container">
-        <div className="py-32">
+        <div className="sm:py-16 lg:py-32">
           <div className="title">Следите за нами в:</div>
           <SocialPart />
         </div>

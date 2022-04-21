@@ -12,16 +12,12 @@ function InstagramSection() {
               <img
                 src={instagramLogo}
                 alt=""
-                className="w-[190px] rounded-full mt-[22px] hover:scale-[1.05] transition-all"
+                className="w-[190px] rounded-full my-[22px] hover:scale-[1.05] transition-all"
               />
+              <p className="text-center font-bold text-[22px]">square360_team</p>
             </a>
           </div>
-          <iframe
-            src="//lightwidget.com/widgets/028a8a8f71635b46ac2de8181952d5ba.html"
-            scrolling="no"
-            allowtransparency="true"
-            className="lightwidget-widget w-full border-0 overflow-hidden"
-          ></iframe>
+          <div class="elfsight-app-a840b625-be0b-4552-86b5-b82c2286decd"></div>
         </div>
       </div>
     </section>

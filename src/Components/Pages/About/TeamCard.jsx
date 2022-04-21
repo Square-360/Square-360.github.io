@@ -12,8 +12,8 @@ function TeamCard({ name, image, jobList }) {
 
   return (
     <div className="team-card bg-[#ffffff] drop-shadow-xl rounded-[30px] text-center pt-[35px] pb-[65px] 
-    sm:pt-[20px] sm:pb-[45px] md:pt-[35px] md:pb-[65px]" data-tilt data-tilt-reverse="true">
-      <img src={"http://localhost:3000/Team_cards/" + image} alt="" className="mx-auto" />
+    sm:pt-[20px] sm:pb-[45px] md:pt-[35px] md:pb-[65px] sm:w-[90%] sm:mx-auto md:w-auto md:mx-0" data-tilt data-tilt-reverse="true">
+      <img src={"https://square-360.github.io/Team_cards/" + image} alt="" className="mx-auto" />
       <h3 className="text-primary mt-[25px] font-bold sm:text-[24px] md:text-[32px] lg:text-[36px]">{name}</h3>
       <ul className="list-disc ml-[50px]">
         {jobList.map((item) => {

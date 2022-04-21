@@ -14,10 +14,8 @@ function Header({ pageId }) {
     let navToggle = document.getElementById("nav-toggle");
     let navBar = document.getElementById("nav");
 
-    navToggle.addEventListener("click", () => {
-      navToggle.classList.toggle("active");
-      navBar.classList.toggle("active");
-    });
+    navToggle.classList.toggle("active");
+    navBar.classList.toggle("active");
   }
 
   // Проверяем ссылки. Проходимся по каждой ссылке в хэдере и если её data-id равен pageId - активируем ссылку
@@ -47,10 +45,8 @@ function Header({ pageId }) {
 
   useEffect(() => {
     setLinkClass();
-    checkNavToggle();
     listenScrollEvent();
     window.addEventListener("scroll", listenScrollEvent);
-    document.addEventListener("DOMContentLoaded", checkNavToggle);
   }, []);
 
   return (
@@ -64,9 +60,13 @@ function Header({ pageId }) {
           {/* Nav */}
           <Nav />
           {/* Burder menu */}
-          <div id="nav-toggle" className="nav-toggle">
+          <button
+            id="nav-toggle"
+            className="nav-toggle"
+            onClick={() => checkNavToggle()}
+          >
             <span className="nav-toggle-item">Menu</span>
-          </div>
+          </button>
         </div>
       </div>
     </header>

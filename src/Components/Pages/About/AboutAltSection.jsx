@@ -4,12 +4,9 @@ import img from "../../../Images/AboutAlt.png";
 function AboutAltSection() {
   return (
     <section
-      className="about relative sm:pt-36 sm:pb-16 lg:pt-52 lg:pb-20"
+      className="about relative sm:pt-32 sm:pb-16 lg:pt-44 lg:pb-20"
       id="about-section"
     >
-      <h1 className="about-title lg:top-[120px] xl:top-[100px]">
-        Расскажем о нас
-      </h1>
       <div className="container relative z-20">
         <div className="flex-box sm:flex-col xl:flex-row">
           <div className="max-w-md text-2xl mb-5">

@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../UI/MyButton/Header/Header";
+import ScrollToTop from "../../ScrollToTop"
 
 function NotFoundPage() {
   return (
     <div className="">
       <Header pageId={""} />
+      <ScrollToTop />
       <div className="max-w-[1230px] mx-auto sm:py-[160px] lg:py-[320px]">
         <h1 className="page-title">Извините, <br /> но страница не найдена :(</h1>
         <h3 className="sm:text-[18px] lg:text-[24px] text-center my-[38px]">

@@ -7,14 +7,15 @@ function IntroSection() {
   return (
     <section className="intro" id="intro-section">
       <div className="container">
-        <div className="pt-[340px] pb-[305px] sm:pt-[205px] sm:pb-[185px] lg:pt-[250px] lg:pb-[205px] xl:pt-[305px] xl:pb-[185px]">
+        <div className="pt-[340px] pb-[305px] sm:pt-[170px] sm:pb-[140px] lg:pt-[250px] lg:pb-[205px] xl:pt-[305px] xl:pb-[185px]">
           <img src={img} alt="" className="animate-spin absolute z-[1000] top-[150px] sm:hidden lg:block" />
           <div className="relative z-[200] text-center">
-            <h1 className="text-white text-[64px] font-black max-w-[890px] mx-auto sm:text-[36px] lg:text-[48px] xl:text-[64px]">
+            <h1 className="text-white text-[64px] font-black max-w-[890px] mx-auto sm:text-[36px] 
+            lg:text-[48px] xl:text-[64px] sm:leading-[1.3] lg:leading-[1.5]">
               Игры - <span className="primary-cl-text">это впечатления,</span> 
               <br /> а Square360 - <span className="primary-cl-text">это игры.</span>
             </h1>
-            <p className="intro-text sm:text-[16px] sm:mt-[20px] lg:text-[20px] xl:text-[24px]">
+            <p className="intro-text sm:text-[16px] mt-[20px] lg:text-[20px] xl:text-[24px]">
               Рады вас приветствовать на сайте команды "Square360", создающей
               игры и приложения!
             </p>

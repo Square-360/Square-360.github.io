@@ -73,11 +73,12 @@ a {
 /* Buttons */
 
 button {
-  @apply text-white text-[22px] font-black 
+  @apply text-white lg:text-[22px] font-black 
           cursor-pointer py-[15px] px-[35px] bg-primary
           border-[3px] border-transparent border-solid rounded-[10px]
           shadow-xl transition-all duration-300 ease-in-out
-          hover:bg-transparent hover:border-primary;
+          hover:bg-transparent hover:border-primary
+          sm:text-[18px];
 }
 
 button.border {
@@ -134,7 +135,7 @@ button:disabled:hover{
 }
 
 .intro-text {
-  @apply text-white text-[24px] font-bold max-w-[760px] mt-[50px] mx-auto mb-0;
+  @apply text-white text-[24px] font-bold max-w-[760px] sm:mt-[30px] mt-[50px] mx-auto mb-0;
 }
 
 /* About-list */
@@ -191,7 +192,8 @@ button:disabled:hover{
 
 .portfolio-btn {
   @apply text-white mt-[38px] border-white shadow-none bg-transparent
-          hover:text-black hover:bg-white hover:border-white sm:text-[18px] lg:text-[22px];
+          hover:text-black hover:bg-white hover:border-white sm:text-[18px] lg:text-[22px]
+          sm:py-[15px] sm:px-[18px];
 }
 
 /* Footer */
